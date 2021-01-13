@@ -22,9 +22,6 @@ const connect = function () {
     conn.write(`Name: AR`);
   });
 
-  conn.on("data", (input) => {
-    if (input === "U+0077") conn.write("Move: up");
-  });
   // const up = () => conn.write("Move: up");
   // const down = () => conn.write("Move: down");
   // const left = () => conn.write("Move: left");

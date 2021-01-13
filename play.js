@@ -2,22 +2,11 @@
 
 const net = require("net");
 const { connect } = require("./client");
+const { Game } = require("./snek-multiplayer/src/Game");
+const { handleUserInput } = require("./input");
+const { setupInput } = require("./input");
 
 console.log("Connecting ...");
 connect();
-
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  stdin.on("data", handleUserInput);
-  return stdin;
-};
-
-// Create a function handleUserInput and
-// register it as the "data" callback handler for stdin.
-
-const handleUserInput = function (keyPress) {};
 
 setupInput();
