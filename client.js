@@ -22,7 +22,7 @@ const connect = function () {
     conn.write(`Name: AR`);
   });
 
-  // const up = () => conn.write("Move: up");
+  // const up =
   // const down = () => conn.write("Move: down");
   // const left = () => conn.write("Move: left");
   // const right = () => conn.write("Move: right");
