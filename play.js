@@ -11,9 +11,13 @@ const setupInput = function () {
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
+  stdin.on("data", handleUserInput);
   return stdin;
 };
 
-setupInput();
+// Create a function handleUserInput and
+// register it as the "data" callback handler for stdin.
 
-const handleUserInput = function (data) {};
+const handleUserInput = function (keyPress) {};
+
+setupInput();
